@@ -3,11 +3,12 @@ const connection = require('./');
 
 const listingSchema = new mongoose.Schema({
   name: String,
-  type: String,
+  listingType: String,
   verified: Boolean,
   price: Number,
-  Rating: Number,
-  numRatings: Number
+  rating: Number,
+  numRatings: Number,
+  pictures: [{type: String}]
 }, 
   {
     timestamps: false
