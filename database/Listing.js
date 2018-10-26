@@ -4,6 +4,7 @@ const connection = require('./');
 const listingSchema = new mongoose.Schema({
   name: String,
   listingType: String,
+  numBeds: Number,
   verified: Boolean,
   price: Number,
   rating: Number,
