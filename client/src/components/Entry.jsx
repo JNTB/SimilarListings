@@ -7,8 +7,9 @@ class Entry extends React.Component {
 
   render() {
     return (
-      <div className="entry">>
-        
+      <div className="entry">
+        <div className="entry-picture"><img src={this.props.listing.pictures[0]}></img></div>
+        <div className="type-size">{this.props.listing.listingType.toUpperCase()} · {this.props.listing.numBeds} BEDS</div>
       </div>
     )
   }

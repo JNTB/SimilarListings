@@ -16,10 +16,11 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.get('/api/similar', (req, res) => {
   Listing.find({})
+    .limit(12)
     .then(data => {
       res.status(200).send(data)
     })
     .catch(err => console.error(err));
-})
+});
 
 app.listen(port, () => console.log(`server listening on port: ${port}`));
