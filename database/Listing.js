@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const connection = require('./');
+const connection = require('.');
 
 const listingSchema = new mongoose.Schema({
   name: String,

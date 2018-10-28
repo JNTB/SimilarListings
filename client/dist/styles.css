@@ -3,17 +3,22 @@ body {
   color: #484848;
 }
 
+#similar-module {
+  margin: 0 auto;
+}
+
 .list {
   display: inline-block;
-  overflow: scroll;
-  max-width: 1048px;
+  width: 1048px;
   max-height: 338px;
+  margin: 0 auto;
+  background-color: aliceblue;
 }
 
 .entry {
   position: relative;
   box-sizing: border-box;
-  width: 33.3333%;
+  width: 100%;
   height: 316.109px;
   display: inline-block;
   padding-left: 8px;
@@ -68,4 +73,9 @@ body {
   font-size: 14px;
   line-height: 18px;
   font-weight: 200;
+}
+
+button.slick-arrow {
+  color: black;
+  background-color: black;
 }
