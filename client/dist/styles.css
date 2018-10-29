@@ -19,6 +19,7 @@ body {
   position: relative;
   box-sizing: border-box;
   width: 100%;
+  min-width: 333.33px;
   height: 316.109px;
   display: inline-block;
   padding-left: 8px;
@@ -75,7 +76,11 @@ body {
   font-weight: 200;
 }
 
-button.slick-arrow {
-  color: black;
-  background-color: black;
+.arrow-next {
+  position: absolute;
+}
+
+.arrow-prev {
+  position: absolute;
+  z-index: 10;
 }
