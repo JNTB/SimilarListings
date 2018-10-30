@@ -4,15 +4,18 @@ body {
 }
 
 #similar-module {
+  width: 1032px;
   margin: 0 auto;
 }
 
 .list {
   display: inline-block;
+  position: relative;
   width: 1048px;
-  max-height: 338px;
+  height: 338px;
   margin: 0 auto;
   background-color: aliceblue;
+  box-sizing: border-box;
 }
 
 .entry {
