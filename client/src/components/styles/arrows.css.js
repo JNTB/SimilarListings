@@ -10,7 +10,8 @@ const span = {
 const button = {
   fill: "transparent", 
   border: "0px", 
-  padding: "0px"
+  padding: "0px",
+  outline: "none"
 }
 
 const svg = {

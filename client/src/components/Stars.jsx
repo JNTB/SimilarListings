@@ -3,8 +3,6 @@ import { FullStar, HalfStar, NoStar } from './Star.jsx';
 import styles from './styles/stars.css';
 
 const Stars = (props) => {
-  console.log(props.rating);
-
   let createStars = () => {
     let rating = props.rating;
     let stars = [];

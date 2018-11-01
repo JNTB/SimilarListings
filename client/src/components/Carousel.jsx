@@ -11,7 +11,7 @@ const CarouselContainer = styled.div`
   transform: ${(props) => {
     if (!props.sliding) return 'translateX(calc(-349.33px))'
     if (props.direction === 'prev') return 'translateX(calc(2* (-349.33px)))'
-    return 'translateX(0%)'
+    return 'translateX(0)'
   }};
 `
 
@@ -23,7 +23,9 @@ const Wrapper = styled.div`
 const CarouselSlot = styled.div`
   flex: 1 0 100%;
   flex-basis: 349.33px;
-  order: ${(props) => props.order};
+  order: ${(props) => {
+    console.log(props);
+    return props.order}};
 `
 
 const EntryPicture = styled.div`

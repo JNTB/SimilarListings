@@ -9,17 +9,19 @@ const Listing = require('../database/Listing');
 const app = express();
 const port = 1128;
 
+const getRandom = (min, max) => Math.ceil(Math.random() * (max - min) + min);
+
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.get('/api/similar', (req, res) => {
-  Listing.find({})
+  Listing
+    .find({})
+    .skip(getRandom(1, 88))
     .limit(12)
-    .then(data => {
-      res.status(200).send(data)
-    })
+    .then(data => res.status(200).send(data))
     .catch(err => console.error(err));
 });
 

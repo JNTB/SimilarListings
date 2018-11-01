@@ -38,7 +38,8 @@ const button = {
   padding: "8px",
   margin: "-8px",
   background: "none",
-  border: "none"
+  border: "none",
+  outline: "none"
 }
 
 const typeSize = {
