@@ -7,7 +7,7 @@ import styles from './styles/carousel.css';
 const CarouselContainer = styled.div`
   display: flex;
   margin: 0 0;
-  transition: ${(props) => props.sliding ? 'none' : 'transform 0.5s ease'};
+  transition: ${(props) => props.sliding ? 'none' : 'transform 0.3s ease'};
   transform: ${(props) => {
     if (!props.sliding) return 'translateX(calc(-349.33px))'
     if (props.direction === 'prev') return 'translateX(calc(2* (-349.33px)))'
@@ -43,7 +43,7 @@ class Carousel extends Component {
     super(props);
 
     this.state = {
-      sliding: false,
+      sliding: 0,
       direction: 'prev',
       position: 0
     }
@@ -55,16 +55,16 @@ class Carousel extends Component {
 
   doSliding(direction, position) {
     this.setState({
-      sliding: true,
+      sliding: this.state.sliding + 1,
       direction,
       position
     })
 
     setTimeout(() => {
       this.setState({
-        sliding: false
+        sliding: this.state.sliding - 1
       })
-    }, 50)
+    }, 15)
   }
 
   getOrder(itemIndex) {
