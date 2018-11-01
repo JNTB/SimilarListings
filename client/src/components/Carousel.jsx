@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { PrevArrow, NextArrow, PrevArrowComp, NextArrowComp } from './Arrows.jsx';
+import Stars from './Stars.jsx';
 import styles from './styles/carousel.css';
 
 const CarouselContainer = styled.div`
@@ -43,6 +44,7 @@ class Carousel extends Component {
 
     this.state = {
       sliding: false,
+      direction: 'prev',
       position: 0
     }
 
@@ -120,6 +122,7 @@ class Carousel extends Component {
                       <div style={styles.listingTitle}>{child.props.listing.name}</div>
                       <div style={styles.listingPrice}>${child.props.listing.price} per night</div>
                     </div>
+                    <Stars rating={child.props.listing.rating} numRatings={child.props.listing.numRatings} />
                   </div>
                 </CarouselSlot>
               ))}

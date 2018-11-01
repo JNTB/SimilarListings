@@ -15,7 +15,6 @@ const list = {
   width: "1048px",
   height: "338px",
   margin: "0 auto",
-  backgroundColor: "aliceblue",
   boxSizing: "border-box"
 }
 
@@ -60,6 +59,7 @@ const listingTitle = {
 }
 
 const listingPrice = {
+  marginTop: "2px",
   fontSize: "14px",
   lineHeight: "18px",
   fontWeight: "200"

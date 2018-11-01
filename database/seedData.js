@@ -59,7 +59,7 @@ for (var i = 0; i < 100; i++) {
   listing.numRatings = numRatings;
   listing.pictures = [];
 
-  var picGroup = Math.ceil(Math.random() * 6);
+  let picGroup = Math.ceil(Math.random() * 6);
   for (let p = 1; p <= 9; p++) {
     listing.pictures.push(`./pictures/${picGroup}/${p}.jpg`);
   }
