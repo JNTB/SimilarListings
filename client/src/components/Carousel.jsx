@@ -9,8 +9,8 @@ const CarouselContainer = styled.div`
   margin: 0 0;
   transition: ${(props) => props.sliding ? 'none' : 'transform 0.3s ease'};
   transform: ${(props) => {
-    if (!props.sliding) return 'translateX(calc(-349.33px))'
-    if (props.direction === 'prev') return 'translateX(calc(2* (-349.33px)))'
+    if (!props.sliding) return 'translateX(-349.33px)'
+    if (props.direction === 'prev') return 'translateX(-698.66px)'
     return 'translateX(0)'
   }};
 `
@@ -23,9 +23,7 @@ const Wrapper = styled.div`
 const CarouselSlot = styled.div`
   flex: 1 0 100%;
   flex-basis: 349.33px;
-  order: ${(props) => {
-    console.log(props);
-    return props.order}};
+  order: ${(props) => props.order}};
 `
 
 const EntryPicture = styled.div`
@@ -60,7 +58,7 @@ class Carousel extends Component {
       sliding: this.state.sliding + 1,
       direction,
       position
-    })
+    });
 
     setTimeout(() => {
       this.setState({
@@ -73,27 +71,17 @@ class Carousel extends Component {
     const { position } = this.state;
     const { children } = this.props;
     const numItems = children.length || 1;
-
-    if (itemIndex - position < 0) {
-      return numItems - Math.abs(itemIndex - position);
-    }
-    return itemIndex - position;
+    return ((numItems + 1) - position + itemIndex) % numItems;
   }
 
   prevSlide() {
     const { position } = this.state;
-    const { children } = this.props;
-    const numItems = children.length;
-
-    this.doSliding('prev', position === 0 ? numItems - 1 : position - 1)
+    this.doSliding('prev', position - 1)
   }
 
   nextSlide() {
     const { position } = this.state;
-    const { children } = this.props;
-    const numItems = children.length || 1;
-
-    this.doSliding('next', position === numItems - 1 ? 0 : position + 1)
+    this.doSliding('next', position + 1)
   }
   
 
@@ -103,7 +91,7 @@ class Carousel extends Component {
       <div>
         <h2>{title}</h2>
         <div style={styles.list}>
-          <PrevArrow>
+          <PrevArrow hidden={this.state.position === 0 ? true : false}>
             <PrevArrowComp prevSlide={this.prevSlide} />
           </PrevArrow>
           <Wrapper>
@@ -130,7 +118,7 @@ class Carousel extends Component {
               ))}
             </CarouselContainer>
           </Wrapper>
-          <NextArrow>
+          <NextArrow hidden={this.state.position === 9 ? true : false}>
             <NextArrowComp nextSlide={this.nextSlide} />
           </NextArrow>
         </div>

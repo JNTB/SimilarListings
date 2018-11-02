@@ -12,6 +12,7 @@ export const PrevArrow = styled.div`
   top: 0px;
   bottom: 0px;
   z-index: 1;
+  visibility: ${(props) => props.hidden ? 'hidden' : 'visible'};
 `
 
 export const NextArrow = styled.div`
@@ -24,6 +25,7 @@ export const NextArrow = styled.div`
   top: 0px;
   bottom: 0px;
   z-index: 1;
+  visibility: ${(props) => props.hidden ? 'hidden' : 'visible'};
 `
 
 export const PrevArrowComp = (props) => (

@@ -1,6 +1,6 @@
 const span = {
   position: "absolute", 
-  top: "35%", 
+  top: "30%", 
   bottom: "auto", 
   padding: "0px", 
   margin: "0px", 
