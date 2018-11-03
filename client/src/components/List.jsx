@@ -23,7 +23,7 @@ export default class CarouselPage extends Component {
       .then(data => {
         this.setState({
           similar: data.data
-        }, () => console.log(this.state.similar))
+        })
       })
       .catch(err => console.error(err));
   }
