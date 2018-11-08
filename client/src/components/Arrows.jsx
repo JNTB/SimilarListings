@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import styles from './styles/Arrows.css';
+import stylr from './styles/Arrows.css';
 
 export const PrevArrow = styled.div`
   position: absolute;
@@ -30,13 +30,13 @@ export const NextArrow = styled.div`
 
 export const PrevArrowComp = (props) => (
   <div onClick={() => props.prevSlide()}>
-    <span className={styles.span} >
-      <button type="button" className={styles.button}>
+    <span className={stylr.span} >
+      <button type="button" className={stylr.button}>
         <svg 
           viewBox="0 0 18 18" 
           role="img" 
           focusable="false" 
-          className={styles.svg}>
+          className={stylr.svg}>
           <path 
             d="m13.7 16.29a1 1 0 1 1 -1.42 1.41l-8-8a1 1 0 0 1 0-1.41l8-8a1 1 0 1 1 1.42 1.41l-7.29 7.29z" 
             fillRule="evenodd">
@@ -49,13 +49,13 @@ export const PrevArrowComp = (props) => (
 
 export const NextArrowComp = (props) => (
   <div onClick={() => props.nextSlide()}>
-    <span className={styles.span}>
-      <button type="button" className={styles.button}>
+    <span className={stylr.span}>
+      <button type="button" className={stylr.button}>
         <svg 
           viewBox="0 0 18 18" 
           role="img" 
           focusable="false" 
-          className={styles.svg}>
+          className={stylr.svg}>
           <path 
             d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" 
             fillRule="evenodd">
