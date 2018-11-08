@@ -1,0 +1,55 @@
+.entry {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 333.33px;
+  height: 316.109px;
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.list {
+  display: inline-block;
+  position: relative;
+  width: 1048px;
+  height: 338px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.button {
+  position: absolute;
+  color: rgb(72, 72, 72);
+  top: 16px;
+  right: 16px;
+  padding: 8px;
+  margin: -8px;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.typeSize {
+  color: rgb(165, 41, 3);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20.02px;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  width: auto;
+}
+
+.listingTitle {  
+  font-size: 16px;
+  word-wrap: break-word;
+  line-height: 22px;
+  font-weight: 650;
+}
+
+.listingPrice {
+  margin-top: 2px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 200;
+}

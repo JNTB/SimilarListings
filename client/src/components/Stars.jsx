@@ -1,6 +1,6 @@
 import React from 'react';
 import { FullStar, HalfStar, NoStar } from './Star.jsx';
-import styles from './styles/stars.css';
+import stylr from './styles/Stars.css';
 
 const Stars = (props) => {
   let createStars = () => {
@@ -21,11 +21,11 @@ const Stars = (props) => {
   }
 
   return (
-    <div style={styles.divRatings}>
-      <span style={styles.spanStars}>
+    <div className={stylr.divRatings}>
+      <span className={stylr.spanStars}>
         {createStars()}
       </span>
-      <span style={styles.spanNumRatings}>
+      <span className={stylr.spanNumRatings}>
         {props.numRatings}
       </span>
     </div>

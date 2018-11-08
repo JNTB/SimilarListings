@@ -7,7 +7,7 @@ const db = require('../database');
 const Listing = require('../database/Listing');
 
 const app = express();
-const port = 1128;
+const port = process.env.PORT || 1128;
 
 const getRandom = (min, max) => Math.ceil(Math.random() * (max - min) + min);
 

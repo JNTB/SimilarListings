@@ -1,14 +1,14 @@
 const divRatings = {
-  display: "block",
+  display: "inline",
   height: "21px",
-  lineHeight: "1.43"
+  lineHeight: "1.43",
 }
 
 const spanStars = {
   paddingRight: "2px",
-  display: "block",
+  display: "inline",
   lineHeight: "10px",
-  float: "left",
+  position: "relative"
 }
 
 const spanNumRatings = {
@@ -17,7 +17,8 @@ const spanNumRatings = {
   fontSize: "11.5px",
   color: "#484848",
   lineHeight: "9px",
-  verticalAlign: "middle"
+  verticalAlign: "middle",
+  position: "relative"
 }
 
 export default { divRatings, spanStars, spanNumRatings };

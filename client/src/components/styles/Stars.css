@@ -1,0 +1,21 @@
+.divRatings {
+  display: inline;
+  line-height: 1.43;
+}
+
+.spanStars {
+  padding-right: 2px;
+  display: inline;
+  line-height: 10px;
+  position: relative;
+}
+
+.spanNumRatings {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 11.5px;
+  color: #484848;
+  line-height: 9px;
+  vertical-align: middle;
+  position: relative;
+}

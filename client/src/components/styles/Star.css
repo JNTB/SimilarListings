@@ -1,0 +1,71 @@
+.fullStar {
+  display: inline-block;
+  position: relative;
+  margin-right: 1px;
+  line-height: 21px;
+  width: 9px;
+  height: 10px;
+  box-sizing: border-box;
+}
+
+.halfStar {
+  display: inline-block;
+  position: relative;
+  margin-right: 1px;
+  line-height: 21px;
+  width: 9px;
+  height: 10px;
+  box-sizing: bord  er-box;
+}
+
+.noStar {
+  display: inline-block;
+  position: relative;
+  margin-right: 1px;
+  line-height: 21px;
+  width: 9px;
+  height: 10px;
+  box-sizing: border-box;
+}
+
+.span {
+  position: absolute; 
+  left: 0px; 
+  top: 0px; 
+  box-sizing: border-box; 
+  height: 10px; 
+  vertical-align: middle; 
+  display: inline-block;
+}
+
+.svgFull {
+  display: block; 
+  height: 1em; 
+  width: 1em; 
+  fill: #008489; 
+  font-size: 9px;
+}
+
+.svgHalf {
+  display: block; 
+  height: 1em; 
+  width: 1em; 
+  fill: #D8D8D8; 
+  font-size: 9px;
+}
+
+.svgGrey {
+  display: block; 
+  height: 1em; 
+  width: 1em; 
+  fill: #008489; 
+  font-size: 9px;
+}
+
+.svgNone {
+  display: block; 
+  height: 1em; 
+  width: 1em; 
+  fill: #D8D8D8; 
+  font-size: 9px;
+}
