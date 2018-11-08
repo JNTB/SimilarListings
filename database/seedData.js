@@ -3,6 +3,7 @@ const Listing = require('./Listing');
 
 let mockData = [];
 
+let picCounter = 1;
 let adjOpts = ['Beautiful', 'Centrally Located', 'Amazing', 'Secluded', 'Romantic', 'Unique', 'Luxury', 'Spacious', 'Chic', 'Gorgeous', 'Cozy', 'Vintage'];
 let typeOpts = ['Loft', 'House', 'Home', 'Penthouse', 'House', 'House', 'House', 'Apartment', 'Apartment', 'Home', 'Apartment', 'Studio', 'Condo', 'Treehouse'];
 let addonOpts = ['Private Balcony', 'Private Pool', 'Great Location', 'Parking Included', 'Free Parking', '', '', '', 'Awesome View', '', '', '', 'Garage Parking'];
@@ -36,7 +37,7 @@ for (var i = 0; i < 100; i++) {
 
   let title = titleOpts[Math.floor(Math.random() * titleOpts.length)];
   
-  let listingType, verified, price, rating, numRatings;
+  let listingType, verified, price, rating, numRatings, picUrl;
   if (type === 'House' || type === 'Home') listingType = 'Entire House';
   else if (type === 'Apartment') listingType = 'Entire Apartment';
   else if (type === 'Penthouse' || type === 'Condo' || type === 'Studio') listingType = 'Entire Condominium';
@@ -49,6 +50,8 @@ for (var i = 0; i < 100; i++) {
   price = Math.ceil(Math.random() * 200) + 95;
   rating = Math.random() * 5
   numRatings = Math.ceil(Math.random() * 360);
+  picUrl = `https://s3-us-west-1.amazonaws.com/fec-airbnb/${picCounter}.jpg`;
+  picCounter === 12 ? picCounter = 1 : picCounter += 1;
 
   listing.name = title;
   listing.listingType = listingType;
@@ -57,12 +60,7 @@ for (var i = 0; i < 100; i++) {
   listing.price = price;
   listing.rating = rating;
   listing.numRatings = numRatings;
-  listing.pictures = [];
-
-  let picGroup = Math.ceil(Math.random() * 6);
-  for (let p = 1; p <= 9; p++) {
-    listing.pictures.push(`./pictures/${picGroup}/${p}.jpg`);
-  }
+  listing.pictures = picUrl;
 
   mockData.push(listing);
 }

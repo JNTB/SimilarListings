@@ -9,7 +9,7 @@ const listingSchema = new mongoose.Schema({
   price: Number,
   rating: Number,
   numRatings: Number,
-  pictures: [{type: String}]
+  pictures: String
 }, 
   {
     timestamps: false

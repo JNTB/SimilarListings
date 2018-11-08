@@ -9,6 +9,23 @@
   padding-right: 8px;
 }
 
+.entrypicture {
+  box-sizing: border-box;
+  height: 222.22px;
+  width: 333.33px;
+  text-align: center;
+  border-radius: 3px;
+  background-size: contain;
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.wrapper {
+  width: 1048px;
+  overflow: hidden;
+}
+
 .list {
   display: inline-block;
   position: relative;
@@ -28,6 +45,14 @@
   background: none;
   border: none;
   outline: none;
+}
+
+.svg {
+  height: "28px";
+  width: "28px"; 
+  display: "block"; 
+  overflow: "visible"; 
+  cursor: "pointer";
 }
 
 .typeSize {
